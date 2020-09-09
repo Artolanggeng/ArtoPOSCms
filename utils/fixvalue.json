@@ -1,0 +1,34 @@
+{
+  "Database": {
+    "strHost": "localhost",
+    "strUser": "root",
+    "strPassword": "WLFanMyaYKfMLn9Whh4UdcqgHyhY9cFR;fsda",
+    "strPort": "11011",
+    "strDatabase": "GPIDev",
+    "Process": -2,
+    "Empty": -3,
+    "Query": -4
+  },
+  "CosmosDB": {
+    "strMongoDB": "mongodb://getplus:DiN6o2qGLBKr6nUHpMk3N8I2yJxUbPbSlTrWygQvRkTtBfXuRvD3A5lnufLmEfHopXpU9n877Ddj0huPq7uqyQ==@getplus.documents.azure.com:10255",
+    "strSchema": "/GetPlusDB",
+    "strOptions": "?ssl=true&replicaSet=globaldb"
+  },
+  "Server": {
+    "Port": "41016",
+    "TIME_OUT": "15s"
+  },
+  "Code": {
+    "Success": 0,
+    "Failed": -1,
+    "NotSuccess": 201,
+    "Error": 202,
+    "OK": 200,
+    "BadRequest": 400,
+    "ServiceUnavailable": 503,
+    "Timeout": 504
+  },
+  "ProductV1": {
+    "menu": "/product/v1/202008/menu"
+  }
+} 

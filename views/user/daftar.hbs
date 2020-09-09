@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>Pendaftaran</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="/css/opensans-font.css">
+	<link rel="stylesheet" type="text/css" href="/fonts/line-awesome/css/line-awesome.min.css">
+	<!-- Jquery -->
+	<link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
+	<!-- Main Style Css -->
+	<link rel="stylesheet" href="/css/styledaftar.css" />
+</head>
+
+<body class="form-v4">
+	<div class="page-content">
+		<div class="form-v4-content">
+			<div class="form-left">
+				<h2>ARTO POS</h2>
+				<p class="text-1">Arto POS adalah aplikasi Poin Of Sale yang dapat anda gunakan dalam proses penjualan. Dengan antarmuka yang 'User Friendly' dan feature yang cukup lengkap.</p>
+				<p class="text-2"><span>Hubungi</span> kami segera dan dapatkan penawaran yang menarik. Jangan lupa mengikuti media sosial kami untuk mendapatkan informasi terbaru seputar Arto POS.</p>
+				<div class="form-left-last">
+					<input type="submit" name="login" class="account" value="Masuk" onclick="location.href='/users/login';">
+				</div>
+			</div>
+			<form class="form-detail" action="/users/daftar" method="post">
+				<h2>FORM PENDAFTARAN</h2>
+				<div class="form-row">
+					<label for="your_name_full">Nama Sesuai KTP</label>
+					<input type="text" name="your_name_full" id="your_name_full" class="input-text">
+				</div>
+				<div class="form-group">
+					<div class="form-row form-row-1">
+						<label for="cellular_phone">Nomor Ponsel</label>
+						<input type="text" name="cellular_phone" id="cellular_phone" class="input-text">
+					</div>
+					<div class="form-row form-row-1">
+						<label for="regular_phone">Nomor Telpon</label>
+						<input type="text" name="regular_phone" id="regular_phone" class="input-text">
+					</div>
+				</div>
+				<div class="form-row">
+					<label for="your_email">Alamat Email</label>
+					<input type="text" name="your_email" id="your_email" class="input-text" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}">
+				</div>
+				<div class="form-group">
+					<div class="form-row form-row-1 ">
+						<label for="password">Password</label>
+						<input type="password" name="password" id="password" class="input-text" required>
+					</div>
+					<div class="form-row form-row-1">
+						<label for="confirm-password">Confirm Password</label>
+						<input type="password" name="confirm_password" id="confirm_password" class="input-text" required>
+					</div>
+				</div>
+
+				<!--
+				<div class="form-checkbox">
+					<label class="container">
+						<p>Setuju dengan <a href="#" class="text">Syarat and Ketentuan</a></p>
+						<input type="checkbox" name="checkbox">
+						<span class="checkmark"></span>
+					</label>
+				</div>
+				-->
+
+				<div class="form-row-last">
+					<input type="submit" name="register" class="register" value="Daftar">
+				</div>
+			</form>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+	<script>
+		// just for the demos, avoids form submit
+		jQuery.validator.setDefaults({
+			debug: true,
+			success: function (label) {
+				label.attr('id', 'valid');
+			},
+		});
+		$("#myform").validate({
+			rules: {
+				password: "required",
+				confirm_password: {
+					equalTo: "#password"
+				}
+			},
+			messages: {
+				your_name_full: {
+					required: "Masukan nama sesuai KTP"
+				},
+				cellular_phone: {
+					required: "Masukan nomor handphone"
+				},
+				your_email: {
+					required: "Masukan alamat email"
+				},
+				password: {
+					required: "Masukan password"
+				},
+				confirm_password: {
+					required: "Masukan password",
+					equalTo: "Password tidak sama"
+				}
+			}
+		});
+	</script>
+</body>

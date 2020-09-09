@@ -1,0 +1,16 @@
+{
+  "General": {
+    "PathNotComplete": "Don't do that again",
+    "BasicAuth": "You are not authorize",
+    "UnknownError": "Unknown Error",
+    "BodyEmpty": "Body data is empty"
+  },
+  "Database": {
+    "DBConnectFailed": "Database connection failed",
+    "DuplicateData": "Duplicate Data"
+  },
+  "User": {
+    "UserAlreadyExist": "User sudah ada",
+    "RegistrationSuccess": "Registrasi berhasil"
+  }
+}

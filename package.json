@@ -1,0 +1,28 @@
+{
+  "name": "storyblok-integration-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "local": "nodemon app.js",
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexander Feiglstorfer <delooks@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-timeout": "1.9.0",
+    "express": "4.17.1",
+    "express-handlebars": "5.1.0",
+    "express-myconnection": "1.0.4",
+    "marked": "1.1.1",
+    "mysql2": "2.1.0",
+    "nodemon": "2.0.4",
+    "passport": "0.4.1",
+    "passport-http": "0.3.0",
+    "passport-local": "1.0.0",
+    "storyblok-node-client": "1.0.2",
+    "uuid": "^8.3.0"
+  }
+}
