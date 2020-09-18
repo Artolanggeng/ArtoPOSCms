@@ -34,10 +34,11 @@
     <div class="loader"><img src="/images/loading.gif" alt="#" /></div>
 </div>
 <!-- end loader -->
-
 <!-- body -->
+
 <body class="main-layout">
-    <!-- header -->
+    {{{ _editable }}}
+    <!-- header start -->
     <header>
         <!-- header inner -->
         <div class="header">
@@ -47,19 +48,32 @@
                         <div class="full">
                             <div class="center-desk">
                                 <div class="logo">
+                                    {{#if story.content.CompanyLogo}}
+                                    <a href="/"><img src="{{ story.content.Global.Header.CompanyLogo.Image }}" /></a>
+                                    {{else}}
                                     <a href="/"><img src="/images/logo.png" alt="#" /></a>
+                                    {{/if}}
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
                         <ul class="btn">
+                            {{#if ButtonImage}}
+                            <li><a href="/users/login">{{ story.content.Caption }}</a></li>
+                            <li>
+                                <button type="button" id="sidebarCollapse">
+                                    <img src="/images/menu_icon.png" alt="#" />
+                                </button>
+                            </li>
+                            {{else}}
                             <li><a href="/users/login">Masuk</a></li>
                             <li>
                                 <button type="button" id="sidebarCollapse">
                                     <img src="/images/menu_icon.png" alt="#" />
                                 </button>
                             </li>
+                            {{/if}}
                         </ul>
                     </div>
                 </div>
@@ -67,13 +81,13 @@
         </div>
         <!-- end header inner -->
     </header>
-    <!-- end header -->
+    <!-- header end -->
 
     {{{ body }}}
 
     <script type="text/javascript" src="//app.storyblok.com/f/storyblok-latest.js"></script>
     <script type="text/javascript">
-    storyblok.init()
+        storyblok.init()
 
         // On the change event refresh the window
         storyblok.on('change', function () {

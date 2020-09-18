@@ -1,0 +1,224 @@
+{
+  "components": [
+    {
+      "name": "Blank",
+      "display_name": null,
+      "created_at": "2020-09-08T15:30:56.940Z",
+      "updated_at": "2020-09-08T15:30:56.940Z",
+      "id": 1089453,
+      "schema": {},
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Blank",
+      "component_group_uuid": null
+    },
+    {
+      "name": "feature",
+      "display_name": null,
+      "created_at": "2020-09-06T02:49:23.681Z",
+      "updated_at": "2020-09-06T02:49:23.681Z",
+      "id": 1085805,
+      "schema": {
+        "name": {
+          "type": "text"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "feature",
+      "component_group_uuid": null
+    },
+    {
+      "name": "Global",
+      "display_name": "Global Component",
+      "created_at": "2020-09-08T15:17:45.580Z",
+      "updated_at": "2020-09-08T15:39:12.961Z",
+      "id": 1089421,
+      "schema": {
+        "Header": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "Header"
+          ],
+          "description": "Penampung content header",
+          "display_name": "",
+          "restrict_type": "groups",
+          "component_group_whitelist": [
+            "7f74e7ac-8ec9-490a-988e-f1e1887b64ab"
+          ]
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Global Component",
+      "component_group_uuid": null
+    },
+    {
+      "name": "grid",
+      "display_name": null,
+      "created_at": "2020-09-06T02:49:23.669Z",
+      "updated_at": "2020-09-06T02:49:23.669Z",
+      "id": 1085804,
+      "schema": {
+        "columns": {
+          "type": "bloks"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "grid",
+      "component_group_uuid": null
+    },
+    {
+      "name": "Header",
+      "display_name": "Header Full",
+      "created_at": "2020-09-06T03:42:03.333Z",
+      "updated_at": "2020-09-09T02:07:30.867Z",
+      "id": 1085808,
+      "schema": {
+        "Logo": {
+          "type": "image",
+          "pos": 0,
+          "description": "Gambar logo digunakan oleh header",
+          "display_name": ""
+        },
+        "tab-8e92f69a-4d90-46ed-bba8-27a0ac5fcf45": {
+          "type": "tab",
+          "display_name": "SEO",
+          "keys": [
+            "meta_description",
+            "meta_keywords",
+            "og_image"
+          ],
+          "pos": 2
+        },
+        "meta_description": {
+          "type": "text",
+          "max_length": "200",
+          "pos": 3
+        },
+        "meta_keywords": {
+          "type": "text",
+          "pos": 4
+        },
+        "og_image": {
+          "type": "image",
+          "image_crop": false,
+          "image_width": "",
+          "pos": 5
+        },
+        "LogoHeight": {
+          "type": "number",
+          "display_name": "Logo Height",
+          "description": "Tinggi dari gambar logo"
+        },
+        "LogoWidth": {
+          "type": "number",
+          "display_name": "Logo Width",
+          "description": "Lebar dari gambar logo"
+        },
+        "LogoURL": {
+          "type": "multilink",
+          "display_name": "LogoURL",
+          "description": "Link URL dari gambar logo"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": "",
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Header Full",
+      "component_group_uuid": "7f74e7ac-8ec9-490a-988e-f1e1887b64ab",
+      "component_group_name": "Global"
+    },
+    {
+      "name": "loader",
+      "display_name": "Loader Gif Animation",
+      "created_at": "2020-09-06T14:50:45.288Z",
+      "updated_at": "2020-09-06T15:40:25.685Z",
+      "id": 1086128,
+      "schema": {},
+      "image": "//a.storyblok.com/f/92371/x/7d5a4bdc09/loading.gif",
+      "preview_field": "",
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Loader Gif Animation",
+      "component_group_uuid": null
+    },
+    {
+      "name": "page",
+      "display_name": "Standar Page Default",
+      "created_at": "2020-09-06T02:49:23.644Z",
+      "updated_at": "2020-09-07T12:35:15.690Z",
+      "id": 1085802,
+      "schema": {
+        "body": {
+          "type": "bloks",
+          "pos": 2,
+          "restrict_components": true,
+          "restrict_type": "groups",
+          "component_group_whitelist": [
+            "7f74e7ac-8ec9-490a-988e-f1e1887b64ab"
+          ]
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Standar Page Default",
+      "component_group_uuid": ""
+    },
+    {
+      "name": "teaser",
+      "display_name": null,
+      "created_at": "2020-09-06T02:49:23.657Z",
+      "updated_at": "2020-09-06T02:49:23.657Z",
+      "id": 1085803,
+      "schema": {
+        "headline": {
+          "type": "text"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "teaser",
+      "component_group_uuid": null
+    }
+  ]
+}
