@@ -5,47 +5,55 @@
 
 var express = require('express'),
 	app = express(),
-  StoryblokClient = require('storyblok-node-client'),
+	router = express.Router(),
   url = require('url'),
-	router = express.Router();
+  Storyblok = require('../../utils/storycon').Storyblok
 
-let Storyblok = new StoryblokClient({
-  privateToken: 'igKwQp1pAi4cL2r6GU4rZgtt'
-})
-
-// get main page
-router.get('/', function (req, res) {
-  res.render('layouts/landing', {
-    LogoURL: "/",
-    Logo: "/images/logo.png"
-  });
+// get clear cache
+router.get('/clear_cache', function (req, res) {
+  Storyblok.flushCache();
+  res.send('Cache flushed!');
 });
 
-// get global page
-router.get('/global', function (req, res) {
-  res.render('layouts/global');
-});
-
-router.get('/main', function (req, res) {
+router.get('/*', function (req, res) {
   var path = url.parse(req.url).pathname
-  path = path == '/' ? 'home' : path
+  path = path === '/' ? 'home' : path
 
   Storyblok
     .get(`stories/${path}`, {
       version: req.query._storyblok ? 'draft' : 'published'
     })
     .then((response) => {
-      res.render('layouts/landing', {
+      res.render(`layouts/${path}`, {
         story: response.body.story,
-        params: req.query,
-        LogoURL: "/",
-        Logo: "/images/logo.png"
+        params: req.query
       })
     })
     .catch((error) => {
-      console.log(error)
-      res.send('A ' + error.statusCode.toString() + ' error ocurred')
+      console.log("Status Code -> " + error.statusCode + ", Error -> " + JSON.stringify(error));
+
+      if (error.statusCode === 404) {
+        res.render('layouts/notfound');
+      } else {
+        console.log(error);
+        res.send('An ' + error.statusCode.toString() + ' error ocurred. Please take a look at your error log.');
+      }
     })
+});
+
+// get main page
+router.get('/', function (req, res) {
+  res.render('layouts/home');
+});
+
+// get main page
+router.get('/home', function (req, res) {
+  res.render('layouts/home');
+});
+
+// get global page
+router.get('/global', function (req, res) {
+  res.render('layouts/global');
 });
 
 module.exports = router;

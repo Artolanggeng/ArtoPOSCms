@@ -1,0 +1,20 @@
+{{{ _editable }}}
+<!-- header start -->
+<header>
+  <!-- header inner -->
+  <div class="header">
+    <div class="container-fluid">
+      <div class="row">
+        {{#each companylogo}}
+        {{> (lookup . 'component') }}
+        {{/each}}
+
+        {{#each navlinkmain}}
+        {{> (lookup . 'component') }}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+  <!-- end header inner -->
+</header>
+<!-- header end -->

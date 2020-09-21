@@ -16,6 +16,8 @@
     "express": "4.17.1",
     "express-handlebars": "5.1.0",
     "express-myconnection": "1.0.4",
+    "gulp": "^4.0.2",
+    "gulp-nodemon": "^2.5.0",
     "marked": "1.1.1",
     "mysql2": "2.1.0",
     "nodemon": "2.0.4",

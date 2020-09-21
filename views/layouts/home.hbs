@@ -1,0 +1,11 @@
+{{#each story.content.header}}
+{{> (lookup . 'component') }}
+{{/each}}
+
+{{#each story.content.main}}
+{{> (lookup . 'component') }}
+{{/each}}
+
+{{#each story.content.footer}}
+{{> (lookup . 'component') }}
+{{/each}}

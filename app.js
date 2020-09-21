@@ -1,17 +1,15 @@
 var express = require('express'),
   exphbs = require('express-handlebars'),
   routes = require('./routes/default/index'),
-  users = require('./routes/default/users')
+  users = require('./routes/default/users'),
+  app = express()
 
-// init express
-var app = express();
-
-app.set('Storyblok', 'views')
 app.use(express.static(__dirname + '/public'));
 
 // setup routes
 app.use('/', routes);
 app.use('/users', users);
+app.set('Storyblok', 'views')
 
 app.engine('.hbs', exphbs({
   defaultLayout: 'main',

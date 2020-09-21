@@ -1,0 +1,18 @@
+<div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+  <ul class="btn">
+    {{#if caption}}
+      <li><a href="{{href}}">{{caption}}</a></li>
+    {{else}}
+      <li><a href="/users/login">Masuk</a></li>
+    {{/if}}
+    <li>
+      <button type="button" id="sidebarCollapse">
+        {{#if image}}
+          <img src="{{image}}" width="{{width}}" height="{{height}}" alt="#"/>
+        {{else}}
+          <img src="/images/menu_icon.png" alt="#"/>
+        {{/if}}
+      </button>
+    </li>
+  </ul>
+</div>
